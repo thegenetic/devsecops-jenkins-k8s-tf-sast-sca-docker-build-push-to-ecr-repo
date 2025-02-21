@@ -4,6 +4,7 @@ pipeline {
         maven 'Maven_3_2_5'  
     }
 
+stages{
 	stage('Build') { 
             steps { 
                withDockerRegistry([credentialsId: "dockerlogin", url: ""]) {
@@ -24,5 +25,5 @@ pipeline {
             }
     	}
 	    
-  
+}
 }
